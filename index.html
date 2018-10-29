@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meme Generator - Rithm Assignment</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div id="header" class="container-fluid justify-content-center text-center">
+        <h1>Welcome to Meme City</h1>
+        <p>You can create your own meme below by following 3 simple steps</p>
+    </div>
+
+    <div class='container'>
+        <h5>Create your meme here:</h5>
+        <form>
+            <div class='form-group'>
+                <label for="image-link" id="image-link">Insert a link to a photo here:</label>
+                <br>
+                <input type="text" placeholder="ex: http://myphoto.com" class='col-12'>
+            </div>
+
+            <div class='form-group'>
+                <label for="top-meme">What you want the top to say</label>
+                <br>
+                <input type="text" id='top-input' placeholder="(Optional) Your text here" class='col-12'>
+            </div>
+
+            <div class='form-group'>
+                <label for="bottom-meme">What you want the bottom to say</label>
+                <br>
+                <input type="text" id='bottom-input' placeholder="(Optional) Your text here" class='col-12'>
+            </div>
+            <button id='add-meme' class="btn btn-primary">Add Meme</button>
+        </form>
+        <br>
+    </div>
+    
+    <div class="container-fluid mt-1 mb-1" id="page-break">  
+        <p>Your memes will show up down here:</p>
+    </div> 
+    
+    <div class="container justify-content-center">
+        <div class="row">
+            <div id="meme-1" class="meme col m-1">
+                <h3 class="top-meme justify-content-center" id="top-meme-1"></h3>
+                <h3 class="bottom-meme" id="bottom-meme-1">BOTTOM CAPTION</h3>
+            </div>
+            <div id="meme-2" class="meme col m-1">
+                <h3 class="top-meme" id="top-meme-2">HEY</h3>
+                <h3 class="bottom-meme" id="bottom-meme-2"></h3>
+            </div>
+            <div id="meme-3" class="meme col m-1">
+                <h3 class="top-meme" id="top-meme-3">HEY</h3>
+                <h3 class="bottom-meme" id="bottom-meme-3"></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-center">
+        <div class="row">
+            <button id='clear-button' class="btn btn-secondary col m-3">Clear Meme</button>
+            <button id='clear-button' class="btn btn-secondary col m-3">Clear Meme</button>
+            <button id='clear-button' class="btn btn-secondary col m-3">Clear Meme</button>
+        </div>
+    </div>
+    <div class='container'>
+        <img src="https://www.shutterstock.com/image-photo/british-shorthair-cat-isolated-on-white-684452320" alt="cat pic">
+    </div>
+    
+    
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/flatly/bootstrap.min.css">
+    <script src="./action.js"></script>
+</body>
+</html>
