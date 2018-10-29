@@ -17,10 +17,21 @@
 
 .top-meme{
     position: absolute;
+    top: 1%;
+    color: white;
 }
 
 .bottom-meme{
     position: absolute;
     bottom: 1%;
     text-align: center;
+    color: white;
 }
+
+img {
+    display: inline-block;
+    position: relative; 
+    height: 250px;
+    width: 250px;
+}
+
