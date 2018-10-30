@@ -8,13 +8,13 @@
 }
 
 #meme-container{
-    height: 100%;
-    width: 100%;
+    height: webkit-fill-availble;
 }
 
-.canvas.meme{
-    display: block;
-    position: absolute;
+.meme{
+    
+    display: inline-block;
+    position: relative;
     background-color: lightgray;
     height: 250px;
     width: auto;
