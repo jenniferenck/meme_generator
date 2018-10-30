@@ -36,7 +36,7 @@ addMeme.addEventListener('click', function(event){
     
     createMeme(imgArr.length-1);
     event.preventDefault();
-
+    document.querySelector('form').reset();
 });
 
 //OLD CODE... to remove
