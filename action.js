@@ -40,10 +40,11 @@ addMeme.addEventListener('click', function(event){
     document.querySelector('form').reset();
 });
 
+// Need to change this to a button or create hover feature for close... 
 memeContainer.addEventListener("click", function (event) {
     if(event.target && event.target.matches('img') || event.target.matches('p')) {
-		// List item found!  Output the ID!
-        alert('a meme was clicked')
+		// List item found!  Delete Meme
+        event.target.parentNode.parentNode.removeChild(event.target.parentNode);
 	}
-})
+});
 
