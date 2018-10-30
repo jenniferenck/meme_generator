@@ -1,4 +1,3 @@
-
 const topInput = document.getElementById('top-input');
 const bottomInput = document.getElementById('bottom-input');
 const addMeme = document.getElementById('add-meme');
@@ -6,7 +5,7 @@ const memeContainer = document.getElementById('meme-container')
 
 var imgArr = [];
 
-function createMeme (index){
+function createMeme (imageURL){
     // create new element structure:
     var meme = document.createElement('div');
     meme.classList.add('meme');
@@ -19,7 +18,6 @@ function createMeme (index){
     bottomCaption.innerHTML = bottomInput.value;
     bottomCaption.classList.add('bottom-meme');
 
-    var imageURL = document.getElementById('image-link').value;
     var image = document.createElement('img');
     image.src = imageURL;
     
@@ -30,25 +28,17 @@ function createMeme (index){
     meme.appendChild(bottomCaption);
 }
 
-// adding EVENT LISTENERS
+// EVENT LISTENERS
 
 addMeme.addEventListener('click', function(event){
-    imgArr.push(imageURL);
+    event.preventDefault();  
     
-    // need conditions if URL isn't filled...
-    
-    createMeme(imgArr.length-1);
-    event.preventDefault();
+    // capture image link and pass into createMeme function
+    var imageURL = document.getElementById('image-link').value;
+    //imgArr.push(imageURL);
+    createMeme(imageURL);
     document.querySelector('form').reset();
 });
-
-// need global meme variable before we can select them
-// var meme = document.getElementsByClassName('meme');
-// for (let i=0; i<meme.length; i++){
-//     meme[i].addEventListener('click', ()=> {
-//         alert('You clicked a meme');
-//    })
-// }
 
 memeContainer.addEventListener("click", function (event) {
     if(event.target && event.target.matches('img') || event.target.matches('p')) {
@@ -56,3 +46,4 @@ memeContainer.addEventListener("click", function (event) {
         alert('a meme was clicked')
 	}
 })
+
