@@ -18,9 +18,9 @@
         <h5>Create your meme here:</h5>
         <form>
             <div class='form-group'>
-                <label for="image-link" id="image-link">Insert a link to a photo here:</label>
+                <label for="image-link" >Insert a link to a photo here:</label>
                 <br>
-                <input type="file" placeholder="filepath/image.jpg" accept="image/*" class='col-12'>
+                <input type="url" id="image-link" placeholder="the URL goes here" value="" class='col-12'>
             </div>
 
             <div class='form-group'>
@@ -46,8 +46,38 @@
     </div> 
     
     <div class="container justify-content-center">
-        <div class="row" id="canvas">
+        <div class="row">
+            <div id="meme-1" class="meme col m-1">
+                <img src="/Users/jenniferenck/Desktop/Desktop - Jennifer’s MacBook Air/javascript-files/rithm-prework/project_site/calma.jpg" alt="your image goes here">
+                <div class="captions">
+                    <h3 class="top-meme justify-content-center" id="top-meme-1">TOP CAPTION</h3>
+                    <h3 class="bottom-meme" id="bottom-meme-1">BOTTOM CAPTION</h3>
+                </div>
+                <button id='clear-meme-1' class="btn btn-secondary col m-4">Clear Meme</button>   
+            </div>
 
+            <div id="meme-2" class="meme col m-1">
+                <!--image goes here-->
+                <img src="" alt="image goes here">
+                <div class="captions">
+                    <h3 class="top-meme" id="top-meme-2">TOP CAPTION</h3>
+                    <h3 class="bottom-meme" id="bottom-meme-2">BOTTOM CAPTION</h3>
+                </div>
+                <button id='clear-meme-2' class="btn btn-secondary col m-4">Clear Meme</button>
+            </div>
+            
+
+            <div id="meme-3" class="meme col m-1">
+                <!--image goes here-->
+                <img src="" alt="image goes here">
+                <div class="captions">
+                    <h3 class="top-meme" id="top-meme-3">TOP CAPTION</h3>
+                    <h3 class="bottom-meme" id="bottom-meme-3">BOTTOM CAPTION</h3>
+                </div>
+                <button id='clear-meme-3' class="btn btn-secondary col m-4">Clear Meme</button>
+            </div>
+            
+        </div>
     </div>
     
     

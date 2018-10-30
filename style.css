@@ -7,9 +7,14 @@
     color: white;
 }
 
-.meme{
-    display: inline-block;
-    position: relative;
+#meme-container{
+    height: 100%;
+    width: 100%;
+}
+
+.canvas.meme{
+    display: block;
+    position: absolute;
     background-color: lightgray;
     height: 250px;
     width: auto;
