@@ -1,4 +1,4 @@
-var imageURL = document.getElementById('image-link').value;
+
 const topInput = document.getElementById('top-input');
 const bottomInput = document.getElementById('bottom-input');
 const addMeme = document.getElementById('add-meme');
@@ -19,6 +19,7 @@ function createMeme (index){
     bottomCaption.innerHTML = bottomInput.value;
     bottomCaption.classList.add('bottom-meme');
 
+    var imageURL = document.getElementById('image-link').value;
     var image = document.createElement('img');
     image.src = imageURL;
     
@@ -34,62 +35,24 @@ function createMeme (index){
 addMeme.addEventListener('click', function(event){
     imgArr.push(imageURL);
     
+    // need conditions if URL isn't filled...
+    
     createMeme(imgArr.length-1);
     event.preventDefault();
     document.querySelector('form').reset();
 });
 
-//OLD CODE... to remove
+// need global meme variable before we can select them
+// var meme = document.getElementsByClassName('meme');
+// for (let i=0; i<meme.length; i++){
+//     meme[i].addEventListener('click', ()=> {
+//         alert('You clicked a meme');
+//    })
+// }
 
-// createMeme();
-    //document.querySelector('form').reset();
-
-// addMeme.addEventListener('click', function(event) {
-//     if (topMeme1.innerHTML === "TOP CAPTION"){
-//         var img = document.createElement('img');
-//         img.src = imageInput.value;
-//         meme1.appendChild(img);
-
-//         topMeme1.innerHTML = topInput.value;
-//         bottomMeme1.innerHTML = bottomInput.value; 
-//         alert('you just clicked: ' + event.target.innerText);
-//         event.preventDefault();
-//         document.querySelector('form').reset();
-//     } else if (topMeme2.innerHTML === "TOP CAPTION") {
-//         topMeme2.innerHTML = topInput.value;
-//         bottomMeme2.innerHTML = bottomInput.value; 
-//         alert('you just clicked: ' + event.target.innerText);
-//         event.preventDefault();
-//         document.querySelector('form').reset();
-//     } else if (topMeme3.innerHTML === "TOP CAPTION"){
-//         topMeme3.innerHTML = topInput.value;
-//         bottomMeme3.innerHTML = bottomInput.value; 
-//         alert('you just clicked: ' + event.target.innerText);
-//         event.preventDefault();
-//         document.querySelector('form').reset();
-//     } else {
-//         alert("You need to clear one of your saved memes below to add a new one")
-//     }
-// });
-
-// clearMeme1.addEventListener('click', ()=> {
-//     topMeme1.innerHTML = "TOP CAPTION";
-//     bottomMeme1.innerHTML = "BOTTOM CAPTION";
-// });
-
-
-// const clearMeme1 = document.getElementById('clear-meme-1');
-// const clearMeme2 = document.getElementById('clear-meme-2');
-// const clearMeme3 = document.getElementById('clear-meme-3');
-
-// const meme1 = document.getElementById('meme-1');
-// const meme2 = document.getElementById('meme-2');
-// const meme3 = document.getElementById('meme-3');
-
-// const topMeme1 = document.getElementById('top-meme-1');
-// const topMeme2 = document.getElementById('top-meme-2');
-// const topMeme3 = document.getElementById('top-meme-3');
-
-// const bottomMeme1 = document.getElementById('bottom-meme-1');
-// const bottomMeme2 = document.getElementById('bottom-meme-2');
-// const bottomMeme3 = document.getElementById('bottom-meme-3');
+memeContainer.addEventListener("click", function (event) {
+    if(event.target && event.target.matches('img') || event.target.matches('p')) {
+		// List item found!  Output the ID!
+        alert('a meme was clicked')
+	}
+})

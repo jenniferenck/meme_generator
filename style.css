@@ -12,12 +12,13 @@
 }
 
 .meme{
-    
     display: inline-block;
     position: relative;
     background-color: lightgray;
     height: 250px;
     width: auto;
+    margin: 5px;
+    cursor: pointer;
 }
 
 .top-meme{
