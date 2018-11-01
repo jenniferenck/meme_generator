@@ -21,17 +21,21 @@
     cursor: pointer;
     font-size: 2rem;
     font-size-adjust: inherit;
+    justify-content: center;
 }
 
 .top-meme{
     position: absolute;
+    text-align: center;
     top: 1%;
-    color: white;
+    left: 3%; 
+    color:white;
 }
 
 .bottom-meme{
     position: absolute;
     bottom: 1%;
+    left: 3%;
     text-align: center;
     color: white;
 }
